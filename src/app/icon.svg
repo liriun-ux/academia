@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Fondo Redondeado Institucional -->
+  <rect width="512" height="512" rx="112" fill="#0A192F"/>
+  
+  <!-- "U" de la UMSA estilo escudo -->
+  <path d="M160 180 V 300 C 160 355, 205 400, 256 400 C 307 400, 352 355, 352 300 V 180" 
+        fill="none" 
+        stroke="#FFFFFF" 
+        stroke-width="36" 
+        stroke-linecap="round"/>
+
+  <!-- Gorro de Graduación (Birrete) Dorado superior -->
+  <path d="M256 90 L 380 140 L 256 190 L 132 140 Z" fill="#FFB800"/>
+  
+  <!-- Base del Birrete -->
+  <path d="M192 165 V 195 C 192 210, 320 210, 320 195 V 165" fill="#E6A100"/>
+  
+  <!-- Borla colgante del birrete -->
+  <path d="M350 152 V 220" stroke="#FFB800" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="350" cy="228" r="12" fill="#FFB800"/>
+</svg>
