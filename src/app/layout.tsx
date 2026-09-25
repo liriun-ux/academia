@@ -4,6 +4,20 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import { Inter, Montserrat } from 'next/font/google'
+import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
+
+
+const plusJakarta = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+});
 
 const inter = Inter({
   subsets: ['latin'],
@@ -123,10 +137,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${montserrat.variable} ${gontserratFont.variable} ${heroFont.variable} ${serifFont.variable} ${sansFont.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${plusJakarta.variable} ${spaceGrotesk.variable} ${inter.variable} ${montserrat.variable} ${gontserratFont.variable} ${heroFont.variable} ${serifFont.variable} ${sansFont.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-      <Navbar/>
+      <body className="min-h-full flex flex-col bg-grid-pattern">
+
+  <div className="fixed inset-0 radial-gradient-glow pointer-events-none z-0"></div>
+  <div className="fixed top-1/3 -left-40 w-96 h-96 bg-neonGreen rounded-full blur-[120px] pointer-events-none"></div>
+  <div className="fixed bottom-10 -right-40 w-96 h-96 bg-neonCyan rounded-full blur-[120px] pointer-events-none"></div>
+    <Navbar/>
       {children}
       <Footer/>
       </body>

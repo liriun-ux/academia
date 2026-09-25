@@ -1,57 +1,150 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+
+const whatsapp = "59170000000";
+
+function WhatsAppLink({
+  message,
+  children,
+  className = "",
+}: {
+  message?: string;
+  children: React.ReactNode;
+  className?: string;
+}) {
+  const url = message
+    ? `https://wa.me/${whatsapp}?text=${encodeURIComponent(message)}`
+    : `https://wa.me/${whatsapp}`;
+
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={className}
+    >
+      {children}
+    </a>
+  );
+}
+
 export default function HomePage() {
   return (
     <main className="inicio">
       {/* SECCIÓN 1: HERO BANNER */}
-      <header className="hero">
-        <div className="hero-container">
-          <span className="hero-tag">APRUEBA ESTE AÑO</span>
+      <header className="hero container">
+        <div className="hero-grid">
+          <div className="hero-content">
+            <div className="status-pill">
+              <span className="pulse-dot" />
+              <span>CONVOCATORIA UMSA 2026/2027</span>
+              <strong>INSCRIPCIONES ABIERTAS</strong>
+            </div>
 
-          {/* Card hero */}
-          <div className="hero-card">
-            <h1>Asegura tu Ingreso a la UMSA en el Primer Intento</h1>
-            <p>
-              Preparación especializada y de alto rendimiento para Exámenes de Suficiencia
-              Académica (PSA) y Cursos Prefacultativos en Ingeniería, Medicina y Ciencias Puras.
+            <h1>
+              La Ciencia de
+              <br />
+              <span className="white-gradient">Ingresar a la UMSA</span>
+              <span className="accent-gradient">
+                En el Primer Intento.
+              </span>
+            </h1>
+
+            <p className="hero-description">
+              Plataforma de preparación intensiva y simulacros predictivos con
+              Inteligencia Académica para los exámenes{" "}
+              <strong>PSA y Cursos Prefacultativos</strong> en Medicina,
+              Ingeniería y Ciencias Puras.
             </p>
-            {/* Botones de Acción */}
+
             <div className="hero-actions">
-              <a
-                href="https://wa.me/59170000000?text=Hola,%20quiero%20información%20para%20ingresar%20a%20la%20UMSA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
+              <WhatsAppLink
+                message="Hola, quiero reservar mi cupo"
+                className="primary-button"
               >
+                <span className="whatsapp-icon">◉</span>
                 Inscribirme por WhatsApp
+              </WhatsAppLink>
+
+              <a href="#programas" className="secondary-button">
+                Explorar Facultades <span>›</span>
               </a>
-              <a href="#programas" className="btn-secondary">
-                Ver Programas por Facultad
-              </a>
+            </div>
+
+            <div className="stats">
+              <div>
+                <strong>+1,200</strong>
+                <span>Admitidos Oficiales</span>
+              </div>
+              <div>
+                <strong className="green-text">96.4%</strong>
+                <span>Precisión de Examen</span>
+              </div>
+              <div>
+                <strong className="cyan-text">7 Años</strong>
+                <span>Líderes en La Paz</span>
+              </div>
             </div>
           </div>
 
-          {/* Indicadores clave */}
-          <div className="hero-stats">
-            <div className="stat-card">
-              <strong>+1,200</strong>
-              <p>Ingresantes Admitidos a la UMSA</p>
-            </div>
-            <div className="stat-card">
-              <strong>95%</strong>
-              <p>Efectividad en Simulacros</p>
-            </div>
-            <div className="stat-card">
-              <strong>7 Años</strong>
-              <p>Liderando la preparación en La Paz y El Alto</p>
+          {/* DASHBOARD MOCKUP */}
+          <div className="dashboard-wrap">
+            <div className="dashboard">
+              <div className="window-bar">
+                <div className="window-dots">
+                  <i className="red" />
+                  <i className="yellow" />
+                  <i className="green" />
+                </div>
+                <span>PSA_ANALYTICS_V4.2.LOG</span>
+              </div>
+
+              <div className="score-card">
+                <div className="row-between">
+                  <span>PROBABILIDAD DE INGRESO</span>
+                  <b>OPTIMAL</b>
+                </div>
+                <strong>
+                  92.8 <small>/ 100 PTS</small>
+                </strong>
+                <div className="progress">
+                  <div />
+                </div>
+              </div>
+
+              <div className="metric-grid">
+                <div className="metric">
+                  <span>MATEMÁTICAS / FÍSICA</span>
+                  <strong>98/100</strong>
+                  <small className="green-text">↑ Top 2% General</small>
+                </div>
+                <div className="metric">
+                  <span>QUÍMICA / BIOLOGÍA</span>
+                  <strong>94/100</strong>
+                  <small className="cyan-text">✓ Nivel Sobresaliente</small>
+                </div>
+              </div>
+
+              <div className="activity">
+                <div>
+                  <span>● Simulacro Ingeniería #14 completado</span>
+                  <small>Hace 2m</small>
+                </div>
+                <div>
+                  <span>ϟ Banco de Preguntas UMSA actualizado</span>
+                  <small>Hoy</small>
+                </div>
+              </div>
+
+              <div className="guarantee">◆ Garantía de Preparación</div>
             </div>
           </div>
         </div>
       </header>
 
       {/* SECCIÓN 2: BANNER DE CONVOCATORIA ACTIVA */}
-      <section className="banner-convocatoria">
+      <section className="">
         <div className="banner-container">
           <span className="badge-alert">CUPOS LIMITADOS - INICIO 15 DE OCTUBRE</span>
           <h2>🚀 Ciclo Intensivo Pre-UMSA 2026 – Convocatoria Abierta</h2>
@@ -66,9 +159,58 @@ export default function HomePage() {
           </a>
         </div>
       </section>
+      {/* SECCIÓN 6: PRECIOS */}
+      <section className="">
+        <div className="section-header">
+          <h2>Inversión en tu Futuro Universitario</h2>
+        </div>
+        <div className="grid-precios">
+          {/* Plan Mensual */}
+          <article className="card plan-card">
+            <h3>Ciclo Mensual</h3>
+            <p className="price"><strong>Bs. 250</strong> <span>/ mes</span></p>
+            <ul>
+              <li>Clases en vivo y presenciales</li>
+              <li>PDF de guías y ejercicios</li>
+              <li>Simulacros quincenales</li>
+            </ul>
+            <a
+              href="https://wa.me/59170000000?text=Quiero%20el%20Plan%20Mensual"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary"
+            >
+              Elegir Plan Mensual
+            </a>
+          </article>
+
+          {/* Plan Completo */}
+          <article className="card plan-card card-featured">
+            <span className="badge-featured">RECOMENDADO</span>
+            <h3>Ciclo Completo</h3>
+            <p className="price"><strong>Bs. 600</strong> <span>(Pago único)</span></p>
+            <p className="promo-text"><em>Promoción: Beca Combo (2 personas por Bs. 500 c/u)</em></p>
+            <ul>
+              <li>Clases completas hasta el día del examen</li>
+              <li>Compendio Impreso de Exámenes Pasados</li>
+              <li>Simulacros Ilimitados semanales</li>
+              <li>Acceso a Grabaciones HD</li>
+              <li>Banco de Preguntas UMSA resuelto</li>
+            </ul>
+            <a
+              href="https://wa.me/59170000000?text=Quiero%20el%20Plan%20Completo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Asegurar Plan Completo
+            </a>
+          </article>
+        </div>
+      </section>
 
       {/* SECCIÓN 3: PROGRAMAS POR FACULTAD */}
-      <section id="programas" className="section-programas">
+      <section id="programas" className="">
         <div className="section-header">
           <h2>Elige tu Facultad y Empieza tu Preparación</h2>
           <p>Cursos diseñados según los temarios oficiales actualizados de la UMSA.</p>
@@ -157,7 +299,7 @@ export default function HomePage() {
       </section>
 
       {/* SECCIÓN 4: MÉTODO / DIFERENCIADORES */}
-      <section className="section-metodo">
+      <section className="">
         <div className="section-header">
           <h2>¿Por qué somos la Academia N° 1 en Aprobados UMSA?</h2>
         </div>
@@ -186,7 +328,7 @@ export default function HomePage() {
       </section>
 
       {/* SECCIÓN 5: TESTIMONIOS */}
-      <section className="section-testimonios">
+      <section className="">
         <div className="section-header">
           <h2>Nuestros Estudiantes Ya Están en la UMSA</h2>
         </div>
@@ -208,58 +350,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECCIÓN 6: PRECIOS */}
-      <section className="section-precios">
-        <div className="section-header">
-          <h2>Inversión en tu Futuro Universitario</h2>
-        </div>
-        <div className="grid-precios">
-          {/* Plan Mensual */}
-          <article className="card plan-card">
-            <h3>Ciclo Mensual</h3>
-            <p className="price"><strong>Bs. 250</strong> <span>/ mes</span></p>
-            <ul>
-              <li>Clases en vivo y presenciales</li>
-              <li>PDF de guías y ejercicios</li>
-              <li>Simulacros quincenales</li>
-            </ul>
-            <a
-              href="https://wa.me/59170000000?text=Quiero%20el%20Plan%20Mensual"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary"
-            >
-              Elegir Plan Mensual
-            </a>
-          </article>
-
-          {/* Plan Completo */}
-          <article className="card plan-card card-featured">
-            <span className="badge-featured">RECOMENDADO</span>
-            <h3>Ciclo Completo</h3>
-            <p className="price"><strong>Bs. 600</strong> <span>(Pago único)</span></p>
-            <p className="promo-text"><em>Promoción: Beca Combo (2 personas por Bs. 500 c/u)</em></p>
-            <ul>
-              <li>Clases completas hasta el día del examen</li>
-              <li>Compendio Impreso de Exámenes Pasados</li>
-              <li>Simulacros Ilimitados semanales</li>
-              <li>Acceso a Grabaciones HD</li>
-              <li>Banco de Preguntas UMSA resuelto</li>
-            </ul>
-            <a
-              href="https://wa.me/59170000000?text=Quiero%20el%20Plan%20Completo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-            >
-              Asegurar Plan Completo
-            </a>
-          </article>
-        </div>
-      </section>
 
       {/* SECCIÓN 7: SEDES Y CONTACTO */}
-      <section className="section-contacto">
+      <section className="">
         <div className="section-header">
           <h2>Visítanos o Contáctanos</h2>
         </div>
@@ -301,14 +394,6 @@ export default function HomePage() {
       </section>
 
       {/* BOTÓN FLOTANTE PERMANENTE */}
-      <a
-        href="https://wa.me/59170000000?text=Hola,%20necesito%20orientación%20académica"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn-whatsapp-floating"
-      >
-        <span>💬 Hablar por WhatsApp</span>
-      </a>
     </main>
   );
 }
