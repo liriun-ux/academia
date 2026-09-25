@@ -105,10 +105,10 @@ openGraph: {
     siteName: 'Academia Pre-UMSA',
     images: [
       {
-        url: '/og-img.png', // O la URL absoluta donde alojes la imagen
-        width: 1200,
-        height: 630,
-        alt: 'Monoblock Central UMSA - Academia Pre-UMSA',
+        url: '/og.png', // O la URL absoluta donde alojes la imagen
+        width: 810,
+        height: 336,
+        alt: 'Academia Pre-UMSA | Preparación PSA y Prefacultativos',
       },
     ],
   },
@@ -116,7 +116,7 @@ openGraph: {
     card: 'summary_large_image',
     title: 'Academia Pre-UMSA | Preparación PSA y Prefacultativos',
     description: 'Asegura tu ingreso a la UMSA en Medicina, Ingeniería y Ciencias Puras.',
-    images: ['/og-image.jpg'],
+    images: ['/og.png'],
   },
 
   // Indexación para Motores de Búsqueda
