@@ -60,7 +60,7 @@ export const viewport: Viewport = {
 
 // Metadata Global SEO y Open Graph
 export const metadata: Metadata = {
-  metadataBase: new URL('https://preumsa.bo'), // Cambia por tu dominio real cuando lo despliegues
+  metadataBase: new URL('https://academia-omega-nine.vercel.app'), // Cambia por tu dominio real cuando lo despliegues
   title: {
     default: 'Academia Pre-UMSA | Preparación Exámenes PSA y Prefacultativos',
     template: '%s | Academia Pre-UMSA',
