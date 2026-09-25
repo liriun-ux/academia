@@ -82,22 +82,27 @@ export const metadata: Metadata = {
   },
 
   // Open Graph (WhatsApp, Facebook, LinkedIn)
-  openGraph: {
+openGraph: {
     type: 'website',
     locale: 'es_BO',
     url: 'https://preumsa.bo',
-    title: 'Academia Pre-UMSA | Asegura tu Ingreso en el Primer Intento',
-    description:
-      'Preparación de alto rendimiento para ingresar a la UMSA. Clases presenciales y virtuales con resolución de exámenes pasados.',
+    title: 'Academia Pre-UMSA | Preparación PSA y Prefacultativos',
+    description: 'Asegura tu ingreso a la UMSA en Medicina, Ingeniería y Ciencias Puras.',
     siteName: 'Academia Pre-UMSA',
+    images: [
+      {
+        url: '/og-img.png', // O la URL absoluta donde alojes la imagen
+        width: 1200,
+        height: 630,
+        alt: 'Monoblock Central UMSA - Academia Pre-UMSA',
+      },
+    ],
   },
-
-  // Twitter Cards
   twitter: {
     card: 'summary_large_image',
     title: 'Academia Pre-UMSA | Preparación PSA y Prefacultativos',
-    description:
-      'Asegura tu ingreso a la UMSA en Medicina, Ingeniería y Ciencias Puras. ¡Cupos limitados!',
+    description: 'Asegura tu ingreso a la UMSA en Medicina, Ingeniería y Ciencias Puras.',
+    images: ['/og-image.jpg'],
   },
 
   // Indexación para Motores de Búsqueda
