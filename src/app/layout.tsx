@@ -99,7 +99,7 @@ export const metadata: Metadata = {
 openGraph: {
     type: 'website',
     locale: 'es_BO',
-    url: 'https://preumsa.bo',
+    url: 'https://academia-omega-nine.vercel.app/',
     title: 'Academia Pre-UMSA | Preparación PSA y Prefacultativos',
     description: 'Asegura tu ingreso a la UMSA en Medicina, Ingeniería y Ciencias Puras.',
     siteName: 'Academia Pre-UMSA',
