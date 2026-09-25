@@ -106,8 +106,8 @@ openGraph: {
     images: [
       {
         url: '/og.png', // O la URL absoluta donde alojes la imagen
-        width: 756,
-        height: 618,
+        width: 581,
+        height: 581,
         alt: 'Academia Pre-UMSA | Preparación PSA y Prefacultativos',
       },
     ],
