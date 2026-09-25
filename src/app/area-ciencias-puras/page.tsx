@@ -10,9 +10,9 @@ export default function AreaCienciasPurasPage() {
   };
 
   return (
-    <main className="area-page">
+    <main className="area-page ">
       {/* HERO DE ÁREA */}
-      <header className="area-hero">
+      <header className="area-hero inf_img">
         <h1>Preparación para la Facultad de Ciencias Puras y Naturales (FCPN UMSA)</h1>
         <p>
           Preparación para las carreras de Informática, Biología, Física, Química, Matemáticas y Estadística.

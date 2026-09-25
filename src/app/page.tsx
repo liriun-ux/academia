@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HomePage() {
   return (
@@ -75,24 +76,55 @@ export default function HomePage() {
 
         <div className="grid-cards">
           {/* Card 1: Ingeniería */}
-          <article className="card program-card">
-            <div className="card-tag">FING UMSA</div>
-            <h3>Facultad de Ingeniería</h3>
-            <p><strong>Materias Clave:</strong> Física, Química, Matemáticas (Cálculo) y Álgebra.</p>
-            <p><strong>Dirigido a:</strong> Pre-Ingeniería Civil, Industrial, Sistemas, Electrónica, Mecánica, Petrolera, etc.</p>
-            <p><strong>Duración:</strong> 8 a 12 Semanas (Intensivo).</p>
-            <Link href="/area-ingenieria" className="btn-card">
-              Ver Plan de Ingeniería
-            </Link>
-          </article>
+<article className="card program-card">
+      <div className="card-image-wrapper">
+        <Image
+          src="/img/ing.jpg"
+          alt="Fachada de la Facultad de Ingeniería UMSA en la Plaza Obelisco, La Paz"
+          width={600}
+          height={350}
+          className="card-media-img"
+          priority
+        />
+        <div className="card-tag">FING UMSA</div>
+      </div>
+
+      <div className="card-content">
+        <h3>Facultad de Ingeniería</h3>
+        <p>
+          <strong>Materias Clave:</strong> Física, Química, Matemáticas (Cálculo) y Álgebra.
+        </p>
+        <p>
+          <strong>Dirigido a:</strong> Pre-Ingeniería Civil, Industrial, Sistemas, Electrónica, Mecánica, Petrolera, etc.
+        </p>
+        <p>
+          <strong>Duración:</strong> 8 a 12 Semanas (Intensivo).
+        </p>
+        <Link href="/area-ingenieria" className="btn-card">
+          Ver Plan de Ingeniería
+        </Link>
+      </div>
+    </article>
 
           {/* Card 2: Medicina */}
           <article className="card program-card">
+      <div className="card-image-wrapper">
+        <Image
+          src="/img/medicina.jpg"
+          alt="Fachada de la Facultad de Ingeniería UMSA en la Plaza Obelisco, La Paz"
+          width={600}
+          height={350}
+          className="card-media-img"
+          priority
+        />
             <div className="card-tag">FMS UMSA</div>
+      </div>
+      <div className="card-content">
             <h3>Facultad de Medicina, Enfermería y Tecnología</h3>
             <p><strong>Materias Clave:</strong> Biología Celular, Morfofisiología, Química, Física y Lenguaje.</p>
             <p><strong>Dirigido a:</strong> Medicina, Enfermería, Odontología, Nutrición y Tecnología Médica.</p>
             <p><strong>Duración:</strong> 10 a 14 Semanas (Intensivo).</p>
+        </div>
             <Link href="/area-medicina" className="btn-card">
               Ver Plan de Medicina
             </Link>
@@ -100,11 +132,23 @@ export default function HomePage() {
 
           {/* Card 3: Ciencias Puras */}
           <article className="card program-card">
+      <div className="card-image-wrapper">
+        <Image
+          src="/img/inf.jpg"
+          alt="Fachada de la Facultad de Ingeniería UMSA en la Plaza Obelisco, La Paz"
+          width={600}
+          height={350}
+          className="card-media-img"
+          priority
+        />
             <div className="card-tag">FCPN UMSA</div>
+            </div>
+      <div className="card-content">
             <h3>Facultad de Ciencias Puras y Naturales</h3>
             <p><strong>Materias Clave:</strong> Matemáticas, Física, Química, Biología, Informática y Estadística.</p>
             <p><strong>Dirigido a:</strong> Cs. de la Computación, Biología, Física, Química, Matemáticas y Estadística.</p>
             <p><strong>Duración:</strong> 8 a 12 Semanas.</p>
+            </div>
             <Link href="/area-ciencias-puras" className="btn-card">
               Ver Plan de Ciencias Puras
             </Link>

@@ -12,7 +12,7 @@ export default function AreaMedicinaPage() {
   return (
     <main className="area-page">
       {/* HERO DE ÁREA */}
-      <header className="area-hero">
+      <header className="area-hero md_img">
         <h1>Preparación para la Facultad de Medicina, Enfermería y Odontología (FMS UMSA)</h1>
         <p>
           Entrenamiento intensivo de memorización activa, mnemotecnias y resolución de pruebas de
